@@ -36,21 +36,10 @@ gulp.task('styles', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'src/libs/1.jquery/dist/jquery.min.js'
-		])
-	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
-	.pipe(gulp.dest('assets/js'))
-	.pipe(browserSync.reload({ stream: true }))
-});
-
-
-gulp.task('js2', function() {
-	return gulp.src([
 		'src/js/custom.js', // Always at the end
 		])
 	.pipe(concat('custom.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
+	.pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('assets/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });
@@ -77,10 +66,9 @@ gulp.task('fonts', function() {
 	  .pipe(gulp.dest('assets/fonts'))
   });
 
-gulp.task('watch', gulp.parallel('styles', 'js', 'js2', 'pug', 'images', 'fonts', 'browser-sync', function() {
+gulp.task('watch', gulp.parallel('styles', 'js', 'pug', 'images', 'fonts', 'browser-sync', function() {
 	gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
-	gulp.watch(['src/js/scripts.min.js'], gulp.series('js'));
-	gulp.watch(['src/**/*.js'], gulp.series('js2'));
+	gulp.watch(['src/**/*.js'], gulp.series('js'));
 	gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
 	gulp.watch('src/img/**/*.{gif,jpg,png,svg}', gulp.series('images'));
 	gulp.watch('src/fonts/**/*.{eot,ttf,woff,svg,woff2}', gulp.series('fonts'));
