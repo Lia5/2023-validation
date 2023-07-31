@@ -1,0 +1,86 @@
+section.form-section
+	.form-section__label
+		span.form-section__label-text Block
+			span.form-section__label-number 1
+		| /2
+	.container
+		form.steps(enctype="multipart/form-data")
+			.step#step1
+				.form
+					.form-block
+						.form-block__title
+							.form-block__icon.tooltip
+								.tooltip__icon
+										svg.icon
+												use(xlink:href="#icon-qa")
+								.tooltip__text Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							| Contact info
+						.form-group
+							label.form-line
+								input.form-line__input.required.form-line__input-phone(type="text" placeholder="+ 1 939 283 294" required name="contactInfo_phone")
+								span.form-line__label Contact info
+								span.error This field is required
+							label.form-line
+								input.form-line__input.required(type="text" placeholder="Your State" required name="contactInfo_city")
+								span.form-line__label My State/City
+								span.error This field is required
+							label.form-line
+								input.form-line__input.required(type="text" placeholder="Your Name" required name="contactInfo_country")
+								span.form-line__label My Name
+								span.error This field is required
+							label.form-line
+								input.form-line__input.required(type="text" placeholder="Your Country" required name="contactInfo_name")
+								span.form-line__label My Country
+								span.error This field is required
+					.form-block
+						.form-block__title
+							.form-block__icon.tooltip
+								.tooltip__icon
+										svg.icon
+												use(xlink:href="#icon-qa")
+								.tooltip__text Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							| Main Questions
+						.form-lines
+							label.form-line
+								input.form-line__input(type="text" placeholder="Type your answer here" name="questions_1")
+								span.form-line__label Morbi placerat laoreet turpis ut pharetra?
+								span.error Error
+							label.form-line
+								input.form-line__input(type="text" placeholder="Type your answer here" name="questions_2")
+								span.form-line__label Donec efficitur fermentum augue vestibulum gravida?
+								span.error Error
+							label.form-line
+								input.form-line__input(type="text" placeholder="Type your answer here" name="questions_3")
+								span.form-line__label Praesent ullamcorper malesuada nunc ac blandit?
+								span.error Error
+							label.form-line
+								input.form-line__input(type="text" placeholder="Type your answer here" name="questions_4")
+								span.form-line__label Proin euismod leo eu metus commodo sodales?
+								span.error Error
+
+				.step__controls
+					a(href="#step2").btn.btn-control.move-to-step Next
+						svg.icon
+								use(xlink:href="#icon-right")
+			.step.hide#step2
+				.form
+					.form-block
+						.form-block__title
+							.form-block__icon.tooltip
+								.tooltip__icon
+										svg.icon
+												use(xlink:href="#icon-qa")
+								.tooltip__text Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							| Other questions
+						.form-lines
+							label.form-line
+								textarea.form-line__textarea(name="questions_other", cols="30", rows="10", placeholder="Type your answer here")
+								span.form-line__label Nunc consequat blandit quam dapibus lacinia?
+								span.error Error
+							include ../components/input-file
+				.step__controls
+					a(href="#step1").link.move-to-step
+						svg.icon
+							use(xlink:href="#icon-left")
+						| Back
+					button.btn.form__btn(type="submit") Submit form

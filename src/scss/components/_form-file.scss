@@ -1,0 +1,101 @@
+.form-file {
+  &__empty {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  &__input {
+    display: none;
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    margin-left: auto;
+    background: $danger-100;
+    color: $danger;
+    font-size: 14px;
+    height: 36px;
+    min-width: 130px;
+    width: auto;
+    .icon {
+      width: 26px;
+      height: 24px;
+      padding: 6px;
+      fill: $danger;
+    }
+    &:hover {
+      background: $danger;
+      color: $white;
+      .icon {
+        fill: $white;
+      }
+    }
+  }
+  &__text {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text;
+    margin-right: auto;
+    margin-bottom: 16px;
+    @include media-lg {
+      width: auto;
+      padding-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+  &__formats {
+    color: $tooltip;
+    padding-left: 4px;
+  }
+  &__fill {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__icon {
+    width: 9px;
+    height: 15px;
+    margin-right: 8px;
+    .icon {
+      fill: $tooltip;
+    }
+  }
+  &__clear {
+    width: 10px;
+    height: 10px;
+    margin-left: 11px;
+    .icon {
+      fill: $label;
+    }
+  }
+  &__info {
+    flex-grow: 1;
+  }
+  &__name {
+    color: $danger;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration-line: underline;
+  }
+  &__meta {
+    display: flex;
+    color: $label;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  &__date {
+    margin-left: 4px;
+    border-left: 1px solid $label;
+    padding-left: 4px;
+  }
+  &__error {
+    color: $danger;
+    font-size: 12px;
+    text-align: right;
+    padding: 8px 0;
+  }
+}

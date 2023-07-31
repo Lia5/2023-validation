@@ -1,0 +1,115 @@
+
+@import "tools/_normalize.scss";
+@import "vars";
+@import "fonts";
+
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+	width: 100%;
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+	screen and (max-width: 1080px) {
+		height: auto;
+	}
+}
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;	
+	color: $text;
+	background: $bg;
+}
+
+b, strong {
+	font-weight: bold;
+}
+.container {
+	width: 100%;
+	max-width: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+	max-width: 790px;
+	// @include media-sm {
+	// 	max-width: 100%;
+	// 	padding: 0 16px;
+	// }
+	// @include media-md {
+	// 	max-width: 452px;
+	// }
+	@include media-lg {
+		padding: 0 16px;
+	}
+	@include media-xl {
+		// max-width: 1232px;
+	}
+	@include media-xl {
+		// max-width: 1232px;
+	}
+}
+.main {
+	position: relative;
+}
+a {
+	text-decoration: none;
+	outline:none;
+	border: none;
+	&:hover {
+		outline:none;
+	}
+	&:active {
+		outline:none;
+		transition: color .1s ease;
+	}
+}
+ul,li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}
+.title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+.subtitle {
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 38px;
+}
+.hide {
+	display: none!important;
+}
+
+@import "components/tooltip";
+@import "components/btn";
+@import "components/form-file";
+
+@import "sections/top";
+@import "sections/step";
+@import "sections/form";
+
+
+
+// @import "media"; // Always at the end

@@ -1,0 +1,7 @@
+.top {
+	text-align: center;
+    padding-top: 40px;
+	@include media-lg {
+        padding-top: 206px;
+    }
+}

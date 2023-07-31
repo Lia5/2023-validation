@@ -1,0 +1,43 @@
+@mixin media-sm {
+    @media (min-width: #{360px}) { 
+        @content;
+    }
+}
+@mixin media-md {
+    @media (min-width: #{452px}) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media (min-width: #{1000px}) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media (min-width: #{1280px}) {
+        @content;
+    }
+}
+@mixin media-xxl {
+    @media (min-width: #{1400px}) {
+        @content;
+    }
+}
+
+$white: #ffffff;
+$bg: #FAF9F8;
+$bg-100: #F0F0F0;
+$text: #3E434C;
+$grey: #5E728D;
+$grey-100: #ECEDEF;
+$danger: #EB6A58;
+$danger-100: #FCE6E2;
+$danger-200: #EF806E;
+$info: #A17601;
+$info-100: rgba(255, 232, 182, 0.60);
+$info-200: #FFE8B6;
+$info-300: #FCC234;
+$border: #F1F2F3;
+$label: #79879B;
+$label-100: #C4C4C4;
+$tooltip: #58667C;

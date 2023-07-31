@@ -1,0 +1,20 @@
+.step {
+  &__controls {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    flex-wrap: wrap;
+    @include media-lg {
+      flex-direction: row;
+    }
+    .btn {
+      max-width: 400px;
+      margin-bottom: 16px;
+      @include media-lg {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

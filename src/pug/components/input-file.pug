@@ -1,0 +1,23 @@
+.form-file
+  .form-file__empty
+    .form-file__text Or upload them in a separate file
+      span.form-file__formats | .doc, .docx, .rtf, .txt only
+    label.form-file__label
+      input.form-file__input(type="file" name="file")
+      .btn.form-file__btn
+        svg.icon
+          use(xlink:href="#icon-plus")
+        | Upload File
+  .form-file__fill.hide
+    .form-file__icon
+      svg.icon
+        use(xlink:href="#icon-file")
+    .form-file__info
+      .form-file__name Lorem_ipsum_dolor_consect...docx
+      .form-file__meta
+        .form-file__size 3 kb
+        .form-file__date Feb 19 2020
+    .form-file__clear
+      svg.icon
+        use(xlink:href="#icon-cross")
+  .form-file__error.hide Error
