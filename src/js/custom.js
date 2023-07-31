@@ -182,9 +182,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // uploadButton.addEventListener("click", () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-    // uploadButton.addEventListener("click", () => {
         let isFileUploaded = fileInput.value;
         if(isFileUploaded != '') {
             if(validateSizeFormat(fileInput)) {
